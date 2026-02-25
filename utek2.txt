@@ -1,0 +1,19 @@
+USE [UTEK]
+GO
+/****** Object:  StoredProcedure [dbo].[DBO.RPISP_UtekCleanActLog2]    Script Date: 19/02/2025 09:42:42 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:      <Author,,Francesco Paolo Alfano>
+-- Create date: <03/01/2025>
+-- Description: <Pulizia delle righe di actLog contenenti righe relative ad informazioni derivanti dal Modula>
+---- e successiva ri-compattazione del database.
+ALTER PROCEDURE [dbo].[DBO.RPISP_UtekCleanActLog2]
+AS
+BEGIN
+
+	SET NOCOUNT ON;
+	DBCC SHRINKDATABASE ('NOME_DEL_DB');  
+END

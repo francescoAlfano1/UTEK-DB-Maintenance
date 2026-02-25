@@ -1,0 +1,19 @@
+Da fare sul server della ditta:
+
+1- creare le due rispettive stored procedures
+ - quella che pulisce il log
+ - quella che lancia lo shrink per ricompattare il database
+
+------------------------------------------------------------------------------------
+
+ 2-  Creare 2 bat : uno lancia la prima stored, l'altro la seconda, 
+     proprio come nei test che sono presenti in questa cartella.
+
+------------------------------------------------------------------------------------
+
+ 3- I due bat dovranno essere schedulati mediante lo scheduler di windows,
+    tra i due è meglio lasciare una distanza di 5-10 minuti per evitare problemi
+    vari ( lo shrink vogliamo che venga eseguito solo a termine della pulizia di NOME_DEL_DATABASELOG)
+
+
+ ------------------------------------------------------------------------------------   
